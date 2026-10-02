@@ -1,0 +1,48 @@
+/* Xóa margin mặc định của trình duyệt để không bị thanh cuộn */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Đặt body làm Flex container để căn giữa .container */
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center;     /* Căn giữa theo chiều dọc */
+    
+    /* Đảm bảo body ít nhất bằng chiều cao màn hình */
+    min-height: 100vh;
+    background-color: #e9ecef;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    /* Đảm bảo container có chiều cao toàn màn hình theo yêu cầu */
+    height: 100vh;
+    width: 100%; /* Đặt 100% chiều rộng để chiếm toàn không gian */
+    
+    /* Để hiển thị đẹp hơn với nội dung bên trong, 
+       chúng ta cũng áp dụng flexbox cho chính container */
+    display: flex;
+    justify-content: center; /* Căn giữa nội dung bên trong nó */
+    align-items: center;
+}
+
+/* CSS trang trí cho hộp nội dung bên trong để dễ nhìn thấy kết quả căn giữa */
+.content-box {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.content-box h1 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.content-box p {
+    color: #666;
+}
